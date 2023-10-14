@@ -1,0 +1,5 @@
+<h1><%= @bookmark.movie.title %></h1>
+<p><%= @bookmark.comment %></p>
+
+<%= link_to 'Back', list_path(@bookmark.list, class: 'btn btn-dark') %>
+<%= link_to 'Delete', @bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>

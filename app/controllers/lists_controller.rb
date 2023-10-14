@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update]
+  before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   def index
     @lists = List.all
@@ -23,13 +23,19 @@ class ListsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
+    if @list.update(list_params)
+      redirect_to @list, notice: 'List was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @list.destroy
+    redirect_to lists_url, notice: 'List was successfully destroyed.'
   end
 
   private

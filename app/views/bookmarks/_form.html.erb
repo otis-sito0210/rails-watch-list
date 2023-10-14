@@ -1,0 +1,12 @@
+<%= simple_form_for [@list, @bookmark] do |form| %>
+  <%= form.association :movie %>
+
+  <div class="form-group">
+    <%= form.label :comment %>
+    <%= form.text_area :comment, class: 'form-control' %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit 'Save', class: 'btn btn-primary mt-3' %>
+  </div>
+<% end %>
