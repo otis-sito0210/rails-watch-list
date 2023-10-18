@@ -5,6 +5,7 @@ class Movie < ApplicationRecord
   has_many :bookmarks
 
   before_destroy :check_for_bookmarks
+  has_one_attached :photo
 
   private
 

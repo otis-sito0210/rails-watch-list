@@ -5,6 +5,7 @@ class List < ApplicationRecord
   has_many :movies, through: :bookmarks
 
   before_destroy :destroy_child_saved_movies
+  has_one_attached :photo
 
   private
 
