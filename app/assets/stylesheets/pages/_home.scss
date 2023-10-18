@@ -41,3 +41,65 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+
+.card-category a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-category-list {
+  background-size: cover;
+  background-position: top center;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 128px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Container for the movie grid */
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust this as needed */
+}
+
+/* Movie card styling */
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust spacing and other styles as needed */
+
+/* Optional: Add media queries for responsive design */
+@media (max-width: 768px) {
+  .movie-card {
+    flex-basis: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Optional custom styles for comments or use Bootstrap classes */
+.comment {
+  font-style: italic;
+  margin-left: 10px;
+  color: #888;
+}
+
+/* Optional custom styles for the movie list */
+.movie-list {
+  margin-top: 20px;
+}
+
+.small-movie-image {
+  max-width: 100px; /* Adjust the width as needed */
+  max-height: auto; /* Maintain aspect ratio */
+}

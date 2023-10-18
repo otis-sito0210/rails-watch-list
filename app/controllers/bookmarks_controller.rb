@@ -2,7 +2,9 @@ class BookmarksController < ApplicationController
 
   def new
     @list = List.find(params[:list_id])
+    @movies = Movie.all
     @bookmark = Bookmark.new
+    raise ActionController::RoutingError.new('Not Found') unless @list
   end
 
   def create
@@ -29,7 +31,7 @@ class BookmarksController < ApplicationController
   private
 
   def bookmark_params
-    params.require(:bookmark).permit(:comment, :movie_id, :photo)
+    params.require(:bookmark).permit(:movie_id, :comment)
   end
 
 end
